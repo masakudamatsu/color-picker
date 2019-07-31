@@ -1,33 +1,37 @@
-.App {
-  text-align: center;
+body {
+    font: 1rem/1 "Open Sans", Helvetica, Arial, sans-serif;
+    font-weight: 300;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.error-message {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: .6em 0;
+  text-align: center
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ciu-search {
+    position: relative;
+    padding: .6em 0;
+    font-size: 4rem;
+    background: #767676; /* the brightest gray that satisfies the 4.5:1 contrast ratio against white */
+    color: #fff;
+    text-align: center
 }
 
-.App-link {
-  color: #61dafb;
+.ciu-search__input {
+    /* Reset the default style of input text fields */
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font: inherit;
+    /* Style the text field */
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    width: 3em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ciu-search__input:focus {
+    background: rgba(255,255,255,0.2);
+    outline: none;
 }
