@@ -1,6 +1,3 @@
-let luminance = 0.9;
-let red = 0.9;
-
 const ColorGenerator = {
   generateColor(luminance, red) {
     const gbLuminance = luminance - 0.2126 * red;

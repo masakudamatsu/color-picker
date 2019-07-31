@@ -2,9 +2,6 @@ import React from 'react';
 import ColorGenerator from '../util/ColorGenerator.js';
 
 class Swash extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const rgbValues = ColorGenerator.generateColor(this.props.luminance, this.props.redLuminance);
     let colorCode;
