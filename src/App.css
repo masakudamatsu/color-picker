@@ -3,12 +3,7 @@ body {
     font-weight: 300;
 }
 
-.error-message {
-  font-size: 2rem;
-  font-weight: 700;
-  padding: .6em 0;
-  text-align: center
-}
+/* LuminanceSetter */
 
 .ciu-search {
     position: relative;
@@ -34,4 +29,25 @@ body {
 .ciu-search__input:focus {
     background: rgba(255,255,255,0.2);
     outline: none;
+}
+
+.error-message {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: .6em 0;
+  text-align: center
+}
+
+/* Swash */
+.swash {
+  align-items: center;
+  display: flex;
+  height: 256px;
+  justify-content: center;
+  width: 256px;
+}
+.rgb-value {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 300;
 }

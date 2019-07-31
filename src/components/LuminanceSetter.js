@@ -8,6 +8,7 @@ class LuminanceSetter extends React.Component {
       error: false
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
   handleChange(event) {
     if (event.target.value.match(/\D+/g)) {
@@ -19,6 +20,13 @@ class LuminanceSetter extends React.Component {
         luminance: event.target.value,
         error: false
       });
+    }
+  }
+  handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      this.props.setLuminance(this.state.luminance);
+    } else {
+      return;
     }
   }
   render() {
@@ -40,7 +48,8 @@ class LuminanceSetter extends React.Component {
                  autoComplete="off"
                  autoFocus
                  value={this.state.luminance}
-                 onChange={this.handleChange}/>
+                 onChange={this.handleChange}
+                 onKeyPress={this.handleKeyPress}/>
           % of pure white
         </p>
         {errorMessage}
