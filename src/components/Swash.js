@@ -3,7 +3,20 @@ import ColorGenerator from '../util/ColorGenerator.js';
 
 class Swash extends React.Component {
   render() {
-    const rgbValues = ColorGenerator.generateColor(this.props.luminance, this.props.redLuminance);
+    let rgbValues;
+    if (this.props.redLuminance) {
+      rgbValues = ColorGenerator.getRedShade(this.props.luminance, this.props.redLuminance);
+    } else if (this.props.greenLuminance) {
+      rgbValues = ColorGenerator.getGreenShade(this.props.luminance, this.props.greenLuminance);
+    } else if (this.props.blueLuminance) {
+      rgbValues = ColorGenerator.getBlueShade(this.props.luminance, this.props.blueLuminance);
+    } else if (this.props.yellowLuminance) {
+      rgbValues = ColorGenerator.getYellowShade(this.props.luminance, this.props.yellowLuminance);
+    } else if (this.props.cyanLuminance) {
+      rgbValues = ColorGenerator.getCyanShade(this.props.luminance, this.props.cyanLuminance);
+    } else if (this.props.purpleLuminance) {
+      rgbValues = ColorGenerator.getPurpleShade(this.props.luminance, this.props.purpleLuminance);
+    }
     let colorCode;
     let color = {};
     if (rgbValues) {
