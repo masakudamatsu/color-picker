@@ -11,14 +11,14 @@ class LuminanceSetter extends React.Component {
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }
   handleChange(event) {
-    if (event.target.value.match(/\D+/g)) {
-      this.setState({
-        error: true
-      });
-    } else {
+    if (event.target.value.match(/[0-9.]+/) && (Number(event.target.value) < 100 && Number(event.target.value) > 0)) {
       this.setState({
         luminance: event.target.value,
         error: false
+      });
+    } else {
+      this.setState({
+        error: true
       });
     }
   }
