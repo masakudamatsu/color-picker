@@ -39,17 +39,38 @@ body {
 }
 
 /* Swash */
-.swash-container {
-  align-items: center;
+.swash-layout {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
+  padding: 3px;
+}
+@media (min-width: 736px) {
+  .swash-layout {
+    padding: 28px;
+  }
+}
+.swash-container {
+  flex: 1 0 0%;
+}
+.swash-container:not(:last-child) {
+  margin: 0 3px 0 0; /* Following Instagram */
+}
+@media (min-width: 736px) {
+  .swash-container:not(:last-child) {
+    margin: 0 28px 0 0; /* Following Instagram */
+  }
 }
 .swash {
-  padding: 10% 0 0 0;
+  padding: 100% 0 0 0;
   position: relative;
-  width: 10%;
+  width: 100%;
+}
+.swash:not(:last-child) {
+  margin: 0 0 3px 0; /* Following Instagram */
+}
+@media (min-width: 736px) {
+  .swash:not(:last-child) {
+    margin: 0 0 28px 0; /* Following Instagram */
+  }
 }
 .rgb-value {
   color: #fff;
