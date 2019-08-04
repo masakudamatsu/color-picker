@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import LuminanceSetter from './components/LuminanceSetter.js';
+import LuminanceSlideSetter from './components/LuminanceSlideSetter.js';
 import Swash from './components/Swash.js';
 class App extends React.Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class App extends React.Component {
       <div className="App">
         <main>
           <LuminanceSetter setLuminance={this.setLuminance} />
+          <LuminanceSlideSetter />
           <div className="swash-layout">
             <section className="swash-container">
               <Swash luminance={this.state.luminance}

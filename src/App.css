@@ -37,7 +37,22 @@ body {
   padding: .6em 0;
   text-align: center
 }
-
+.grey-container {
+  background-color: grey;
+  display: flex;
+  height: 100px;
+  position: relative;
+  width: 100%;
+}
+.grey {
+  flex: 1 0 0%;
+  height: 100%;
+}
+.slider {
+  position: relative;
+  bottom: 55px;
+  width: 100%;
+}
 /* Swash */
 .swash-layout {
   display: flex;
